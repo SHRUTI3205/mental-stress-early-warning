@@ -183,7 +183,7 @@ FastAPI Backend
         ↓
 React Dashboard
 
-System Architecture
+###System Architecture
                 ┌──────────────────────────┐
                 │   StudentLife Dataset    │
                 └────────────┬─────────────┘
@@ -223,6 +223,26 @@ System Architecture
                 │ • Early Warning          │
                 │ • Behavioral Signals     │
                 └──────────────────────────┘
+Technology Stack
+ Frontend
+  React
+  Vite
+  JavaScript
+  CSS
+ Backend
+  Python
+  FastAPI
+  Pydantic
+  Uvicorn
+ Data Science & Machine Learning
+  Pandas
+  NumPy
+  Scikit-learn
+  Joblib
+ Deployment
+  GitHub
+  Render
+  Vercel
 
 
 Mental-Stress-Early-Warning/
