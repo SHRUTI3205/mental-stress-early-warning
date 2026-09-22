@@ -1,7 +1,5 @@
 # Mental Stress Analytics & Early Warning System
 
-### Portfolio upgrade of the existing 7th-semester project
-
 This repository upgrades the existing **Mental Stress Analytics and Early Warning System** documented in the submitted project report. The existing work used the Dartmouth StudentLife dataset, a Random Forest model, a FastAPI backend, and a React dashboard with stress trajectory, risk distribution, important features, personal assessment, and early-warning views.
 
 The new version keeps that architecture and visual direction, but makes the data pipeline reproducible and adds participant-level evaluation, explicit feature engineering, model artifacts, and a clearer separation between current stress analytics and next-day early warning.
