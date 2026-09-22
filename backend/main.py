@@ -29,6 +29,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://mental-stress-early-warning.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -490,6 +491,7 @@ def assessment(
 
     factors = []
 
+
     # --------------------------------------------------------
     # Sleep
     # --------------------------------------------------------
@@ -509,6 +511,7 @@ def assessment(
         factors.append(
             "Below recommended sleep duration"
         )
+
 
     # --------------------------------------------------------
     # Work / Study
@@ -530,6 +533,7 @@ def assessment(
             "Elevated study/work load"
         )
 
+
     # --------------------------------------------------------
     # Physical Activity
     # --------------------------------------------------------
@@ -541,6 +545,7 @@ def assessment(
         factors.append(
             "Low physical activity"
         )
+
 
     # --------------------------------------------------------
     # Screen Time
@@ -562,6 +567,7 @@ def assessment(
             "Elevated screen exposure"
         )
 
+
     # --------------------------------------------------------
     # Mood
     # Lower mood = higher stress indicator
@@ -577,6 +583,7 @@ def assessment(
             "Low mood reported"
         )
 
+
     # --------------------------------------------------------
     # Anxiety
     # --------------------------------------------------------
@@ -590,6 +597,7 @@ def assessment(
         factors.append(
             "Elevated anxiety reported"
         )
+
 
     # --------------------------------------------------------
     # Social Interaction
@@ -606,6 +614,7 @@ def assessment(
             "Low social interaction"
         )
 
+
     # --------------------------------------------------------
     # Workload Perception
     # --------------------------------------------------------
@@ -620,6 +629,7 @@ def assessment(
             "High perceived workload"
         )
 
+
     # --------------------------------------------------------
     # Normalize to 0-100
     # --------------------------------------------------------
@@ -633,6 +643,7 @@ def assessment(
             (score / max_score) * 100
         )
     )
+
 
     # --------------------------------------------------------
     # Risk Classification
@@ -653,6 +664,7 @@ def assessment(
             "Maintain healthy social connections.",
         ]
 
+
     elif percentage < 50:
 
         risk = "Moderate"
@@ -668,6 +680,7 @@ def assessment(
             "Reduce prolonged screen exposure.",
             "Include regular physical activity.",
         ]
+
 
     elif percentage < 75:
 
@@ -687,6 +700,7 @@ def assessment(
             "Talk with someone you trust about how you are feeling.",
         ]
 
+
     else:
 
         risk = "Critical"
@@ -704,6 +718,7 @@ def assessment(
             "Stay connected with trusted people.",
             "Consider speaking with a qualified mental-health professional.",
         ]
+
 
     # --------------------------------------------------------
     # RESPONSE
