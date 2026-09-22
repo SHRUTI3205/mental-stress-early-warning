@@ -169,7 +169,7 @@ The dataset contains longitudinal behavioral observations that can be transforme
 
 ### Data Processing Pipeline
 
-```text
+~~~text
 StudentLife Dataset
         ↓
 Data Extraction
@@ -185,12 +185,17 @@ Machine Learning Models
 FastAPI Backend
         ↓
 React Dashboard
+~~~
 
 The raw dataset is intentionally excluded from the GitHub repository because of its size and data-handling considerations.
 
 The processed dataset required by the application is included separately in the project structure.
 
-System Architecture
+---
+
+## System Architecture
+
+~~~text
                 ┌──────────────────────────┐
                 │   StudentLife Dataset    │
                 └────────────┬─────────────┘
@@ -230,27 +235,44 @@ System Architecture
                 │ • Early Warning          │
                 │ • Behavioral Signals     │
                 └──────────────────────────┘
-Technology Stack
-Frontend
-React
-Vite
-JavaScript
-CSS
-Backend
-Python
-FastAPI
-Pydantic
-Uvicorn
-Data Science & Machine Learning
-Pandas
-NumPy
-Scikit-learn
-Joblib
-Deployment
-GitHub
-Render
-Vercel
-Project Structure
+~~~
+
+---
+
+## Technology Stack
+
+### Frontend
+
+- React
+- Vite
+- JavaScript
+- CSS
+
+### Backend
+
+- Python
+- FastAPI
+- Pydantic
+- Uvicorn
+
+### Data Science & Machine Learning
+
+- Pandas
+- NumPy
+- Scikit-learn
+- Joblib
+
+### Deployment
+
+- GitHub
+- Render
+- Vercel
+
+---
+
+## Project Structure
+
+~~~text
 mental-stress-early-warning/
 │
 ├── backend/
@@ -286,133 +308,198 @@ mental-stress-early-warning/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-Local Setup
-1. Clone the Repository
+~~~
+
+---
+
+## Local Setup
+
+### 1. Clone the Repository
+
+~~~bash
 git clone https://github.com/SHRUTI3205/mental-stress-early-warning.git
 cd mental-stress-early-warning
-2. Create a Python Virtual Environment
+~~~
+
+### 2. Create a Python Virtual Environment
+
+~~~bash
 python -m venv .venv
+~~~
 
 Activate it on Windows:
 
+~~~powershell
 .venv\Scripts\Activate.ps1
-3. Install Python Dependencies
+~~~
+
+### 3. Install Python Dependencies
+
+~~~bash
 pip install -r requirements.txt
-4. Prepare the Dataset
+~~~
+
+### 4. Prepare the Dataset
 
 Place the required StudentLife dataset inside:
 
+~~~text
 data/raw/
+~~~
 
 Then run:
 
+~~~bash
 python src/build_dataset.py
+~~~
 
 This generates:
 
+~~~text
 data/processed/daily_features.csv
-5. Train the Models
+~~~
+
+### 5. Train the Models
+
+~~~bash
 python src/train.py
+~~~
 
 The trained models and evaluation files are saved in:
 
+~~~text
 models/
-6. Start the Backend
+~~~
+
+### 6. Start the Backend
+
+~~~bash
 uvicorn backend.main:app --reload --host 127.0.0.1 --port 8000
+~~~
 
 The backend will be available at:
 
+~~~text
 http://127.0.0.1:8000
-7. Start the Frontend
+~~~
+
+### 7. Start the Frontend
 
 Open another terminal:
 
+~~~bash
 cd frontend
 npm install
 npm run dev
+~~~
 
 The frontend will be available at:
 
+~~~text
 http://localhost:5173
-API Endpoints
-Endpoint	Method	Purpose
-/health	GET	Check API status
-/dashboard	GET	Dashboard analytics
-/participants	GET	Participant information
-/early-warning	GET	Early-warning predictions
-/factors	GET	Model-important factors
-/metrics	GET	Model evaluation metrics
-/behavioral-factors	GET	Behavioral factor information
-/assessment	POST	Personal wellness assessment
-Deployment
+~~~
+
+---
+
+## API Endpoints
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/health` | GET | Check API status |
+| `/dashboard` | GET | Dashboard analytics |
+| `/participants` | GET | Participant information |
+| `/early-warning` | GET | Early-warning predictions |
+| `/factors` | GET | Model-important factors |
+| `/metrics` | GET | Model evaluation metrics |
+| `/behavioral-factors` | GET | Behavioral factor information |
+| `/assessment` | POST | Personal wellness assessment |
+
+---
+
+## Deployment
 
 The application is deployed using separate frontend and backend services.
 
-Frontend
+### Frontend
 
-The React/Vite frontend is deployed using Vercel.
+The React/Vite frontend is deployed using **Vercel**.
 
-Live Application:
+**Live Application:**
 
 https://mental-stress-early-warning.vercel.app
 
-Backend
+### Backend
 
-The FastAPI backend is deployed using Render.
+The FastAPI backend is deployed using **Render**.
 
-Live API:
+**Live API:**
 
 https://mental-stress-early-warning.onrender.com
 
 The frontend communicates with the deployed FastAPI backend through HTTP API requests.
 
-Privacy and Data Handling
+---
+
+## Privacy and Data Handling
 
 The project follows a privacy-conscious approach.
 
-Raw dataset files are not uploaded to the GitHub repository.
-The application does not include a user account system.
-The personal assessment is intended as a wellness screening feature.
-The system is designed for educational and analytical use.
-Results should not be treated as medical diagnosis or treatment recommendations.
-Limitations
+- Raw dataset files are not uploaded to the GitHub repository.
+- The application does not include a user account system.
+- The personal assessment is intended as a wellness screening feature.
+- The system is designed for educational and analytical use.
+- Results should not be treated as medical diagnosis or treatment recommendations.
+
+---
+
+## Limitations
 
 The current system has several limitations:
 
-The available dataset contains a limited number of participants.
-Stress labels may not represent every individual's experience.
-Model performance depends on the available features and dataset quality.
-The early-warning model provides predictive estimates rather than certainty.
-Behavioral feature importance does not establish causality.
-The personal assessment is a rule-based wellness screening mechanism rather than a medical diagnostic model.
-Results should not be interpreted as clinical diagnosis.
-Future Scope
+- The available dataset contains a limited number of participants.
+- Stress labels may not represent every individual's experience.
+- Model performance depends on the available features and dataset quality.
+- The early-warning model provides predictive estimates rather than certainty.
+- Behavioral feature importance does not establish causality.
+- The personal assessment is a rule-based wellness screening mechanism rather than a medical diagnostic model.
+- Results should not be interpreted as clinical diagnosis.
+
+---
+
+## Future Scope
 
 Possible future improvements include:
 
-Larger and more diverse datasets
-Personalized stress models
-Additional behavioral and physiological signals
-Temporal deep-learning models
-Explainable AI techniques
-Improved early-warning calibration
-Mobile application integration
-Real-time sensor integration
-User-specific longitudinal monitoring
-Enhanced privacy controls
-Disclaimer
+- Larger and more diverse datasets
+- Personalized stress models
+- Additional behavioral and physiological signals
+- Temporal deep-learning models
+- Explainable AI techniques
+- Improved early-warning calibration
+- Mobile application integration
+- Real-time sensor integration
+- User-specific longitudinal monitoring
+- Enhanced privacy controls
 
-This project is developed for educational, analytical, and awareness purposes.
+---
+
+## Disclaimer
+
+This project is developed for **educational, analytical, and awareness purposes**.
 
 The predictions, risk categories, and assessment results are not medical diagnoses and should not be used as a replacement for professional mental-health advice, diagnosis, or treatment.
 
-Author
+---
 
-Shruti Sharma
+## Author
 
-B.Tech — Data Science
+**Shruti Sharma**
+
+B.Tech — Data Science  
 S.B. Jain Institute of Technology, Management & Research, Nagpur
 
-License
+---
+
+## License
 
 This project is intended primarily as an academic and educational project.
