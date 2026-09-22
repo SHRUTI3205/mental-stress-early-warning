@@ -17,7 +17,7 @@ import {
 } from 'recharts';
 import './styles.css';
 
-const API = 'http://127.0.0.1:8000';
+const API = 'https://mental-stress-early-warning.onrender.com';
 
 const behavioralSignalNames = [
   'audio_events',
