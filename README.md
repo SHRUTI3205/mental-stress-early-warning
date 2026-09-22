@@ -182,8 +182,6 @@ Machine Learning Models
 FastAPI Backend
         ↓
 React Dashboard
----
 
 
 
-See `models/metrics.json` for the exact run produced from the uploaded dataset. Do not copy the old 75% figure into the new README unless a fresh evaluation actually reproduces it under the stated split and feature definition.
