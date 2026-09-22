@@ -183,6 +183,7 @@ FastAPI Backend
         ↓
 React Dashboard
 
+System Architecture
                 ┌──────────────────────────┐
                 │   StudentLife Dataset    │
                 └────────────┬─────────────┘
