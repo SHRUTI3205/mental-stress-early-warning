@@ -182,8 +182,9 @@ Machine Learning Models
 FastAPI Backend
         ↓
 React Dashboard
+---
 
-###System Architecture
+## System Architecture
                 ┌──────────────────────────┐
                 │   StudentLife Dataset    │
                 └────────────┬─────────────┘
@@ -223,7 +224,10 @@ React Dashboard
                 │ • Early Warning          │
                 │ • Behavioral Signals     │
                 └──────────────────────────┘
-Technology Stack
+---
+
+## Technology Stack
+
  Frontend
   React
   Vite
