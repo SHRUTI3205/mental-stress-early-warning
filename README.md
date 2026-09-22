@@ -182,6 +182,48 @@ Machine Learning Models
 FastAPI Backend
         ↓
 React Dashboard
+
+                ┌──────────────────────────┐
+                │   StudentLife Dataset    │
+                └────────────┬─────────────┘
+                             │
+                             ▼
+                ┌──────────────────────────┐
+                │ Data Processing &         │
+                │ Feature Engineering       │
+                └────────────┬─────────────┘
+                             │
+                             ▼
+                ┌──────────────────────────┐
+                │ Random Forest Models     │
+                │                          │
+                │ • Current Stress         │
+                │ • Early Warning          │
+                └────────────┬─────────────┘
+                             │
+                             ▼
+                ┌──────────────────────────┐
+                │      FastAPI Backend     │
+                │                          │
+                │ Dashboard API            │
+                │ Participants API         │
+                │ Early Warning API        │
+                │ Assessment API            │
+                └────────────┬─────────────┘
+                             │
+                             ▼
+                ┌──────────────────────────┐
+                │     React Frontend       │
+                │                          │
+                │ • Overview               │
+                │ • Participants           │
+                │ • Personal Assessment    │
+                │ • Stress Trends          │
+                │ • Early Warning          │
+                │ • Behavioral Signals     │
+                └──────────────────────────┘
+
+
 Mental-Stress-Early-Warning/
 ├── backend/
 │   ├── main.py
